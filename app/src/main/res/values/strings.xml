@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">HW_product_recycleview</string>
+
+    <string name="product_name1">Product name : Iphone 12 64GB</string>
+    <string name="product_name2">Product name : Samsung Galaxy S21 Ultra</string>
+    <string name="product_name3">Product name : Xiaomi 11T Pro</string>
+    <string name="product_name4">Product name : Huawei Y6p</string>
+    <string name="product_name5">Product name : Samsung Galaxy Z Flip3</string>
+    <string name="product_name6">Product name : Iphone 13</string>
+
+
+    <string name="productPrice1">Price: 4500 SR</string>
+    <string name="productPrice2">Price: 4500 SR</string>
+    <string name="productPrice3">Price: 2000 SR</string>
+    <string name="productPrice4">Price: 500 SR</string>
+    <string name="productPrice5">Price: 5000 SR</string>
+    <string name="productPrice6">Price: 6000 SR</string>
+
+
+    <string name="quantityNumber1">5</string>
+    <string name="quantityNumber2">5</string>
+    <string name="quantityNumber3">0</string>
+    <string name="quantityNumber4">0</string>
+    <string name="quantityNumber5">50</string>
+    <string name="quantityNumber6">36</string>
+
+    <string name="isVipYes">1</string>
+    <string name="isVibNo">0</string>
+
+
+</resources>
