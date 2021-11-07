@@ -1,9 +1,7 @@
 package com.example.hw_product_recycleview.adapter
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +12,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hw_product_recycleview.MainActivity
 import com.example.hw_product_recycleview.R
+import com.example.hw_product_recycleview.mobileAvailable
 import com.example.hw_product_recycleview.model.Product
 import android.widget.Toast.makeText as makeText1
 
@@ -53,12 +52,17 @@ class productAdapter (
                 toast.show()
             }
         }else {
+            holder.buttonView.setOnClickListener(){
+                val toast = makeText1(context,"The product is available",Toast.LENGTH_SHORT)
+                toast.show()
+
+            /* THIS SECTION FOR THE NEW ACTIVITY BUT IT CRASH THE APP SO I REPLACE IT WITH OTHER TOAST MESSAGE
+
             holder.buttonView.setOnClickListener {
                 val context = holder.buttonView.context
-                val intent = Intent(context, MainActivity::class.java)
-                intent.putExtra("letter", holder.buttonView.text.toString())
+                val intent = Intent(context, mobileAvailable::class.java)
                 context.startActivity(intent)
-
+*/
             }
         }
 

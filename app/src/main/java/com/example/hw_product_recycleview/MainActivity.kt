@@ -2,6 +2,7 @@ package com.example.hw_product_recycleview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = productAdapter(this, myDataset)
+
+        val letterId = intent?.extras?.getString("iphone").toString()
 
 
 
