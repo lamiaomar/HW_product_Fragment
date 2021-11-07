@@ -56,7 +56,7 @@ class productAdapter (
                 holder.buttonView.setOnClickListener {
                     val context = holder.buttonView.context
                     val intent = Intent(context, mobila::class.java)
-                    intent.putExtra("iphone",holder.nameText.text)
+                    intent.putExtra("iphone",context.resources.getString(item.productName))
                     context.startActivity(intent)
             }}}
 
