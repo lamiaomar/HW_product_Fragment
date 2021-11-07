@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = productAdapter(this, myDataset)
 
-        val letterId = intent?.extras?.getString("iphone").toString()
 
 
 
