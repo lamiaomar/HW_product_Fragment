@@ -1,7 +1,6 @@
 package com.example.hw_product_recycleview.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,15 +9,16 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hw_product_recycleview.MainActivity
-import com.example.hw_product_recycleview.R
-import com.example.hw_product_recycleview.mobila
+import com.example.hw_product_recycleview.*
 import com.example.hw_product_recycleview.model.Product
+import androidx.navigation.findNavController
 
 class productAdapter (
     private val context: Context,
     private val dataset: List<Product>
 ) : RecyclerView.Adapter<productAdapter.ProductViewHolder>(){
+
+
 
     class ProductViewHolder(internal val view : View): RecyclerView.ViewHolder(view){
         val nameText : TextView = view.findViewById(R.id.item_title)
@@ -46,19 +46,22 @@ class productAdapter (
 
         holder.qunN.text = context.resources.getString(item.quantityNumber)
 
+
+
         if (holder.qunN.text == "0"){
             holder.buttonView.setOnClickListener(){
                 val toast = Toast.makeText(context,"The product is not available right now",Toast.LENGTH_SHORT)
                 toast.show()
             }
-        }else {
 
-                holder.buttonView.setOnClickListener {
-                    val context = holder.buttonView.context
-                    val intent = Intent(context, mobila::class.java)
-                    intent.putExtra("iphone",context.resources.getString(item.productName))
-                    context.startActivity(intent)
-            }}}
+        }else {
+            holder.buttonView.setOnClickListener(){
+            val action = ProductListFragmentDirections.actionProductListFragmentToMobaileFragment(iphone = holder.nameText.text.toString())
+                holder.buttonView.findNavController().navigate(action)
+
+            }
+        }
+    }
 
     override fun getItemCount(): Int = dataset.size
 }
